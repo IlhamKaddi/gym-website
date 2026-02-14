@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Search, ShoppingCart, Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface NavbarProps {
   className?: string;
@@ -31,23 +32,17 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
         {/* <div className="hidden md:flex items-center space-x-6 lg:space-x-8"> */}
         <div className="flex md:flex items-center space-x-8 max-md:hidden font-medium">
 
-          <a href="#" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">Home</a>
+          <a href="/ " className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">Home</a>
           <a href="#" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">About</a>
-          <a href="#" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">Blog</a>
+      <Link href="/maps" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">
+          Location
+       </Link>
           <a href="#" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">Activities</a>
         </div>
 
         {/* Action Buttons */}
         <div className="flex items-center space-x-2 sm:space-x-4">
-          {/* <button className="p-2 hover:bg-white/10 rounded-full transition-colors">
-            <Search className="w-4 h-4 sm:w-5 sm:h-5" />
-          </button>
-          <button className="p-2 hover:bg-white/10 rounded-full transition-colors relative">
-            <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="absolute -top-1 -right-1 bg-red-500 text-xs w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center text-[10px] sm:text-xs">
-              2
-            </span>
-          </button> */}
+  
           <button className='flex md:flex max-md:hidden px-4 py-[4px] border-2 border-[#EB1C22] rounded-xl'>contact us </button>
           <button
             className="p-2 hover:bg-white/10 rounded-full transition-colors md:hidden"
@@ -83,13 +78,9 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
           >
             About
           </a>
-          <a
-            href="#"
-            className="block text-white hover:text-[#EB1C22] transition-colors py-2 px-4 rounded hover:bg-white/10"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Blog
-          </a>
+        <Link href="/maps" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">
+          Location
+       </Link>
           <a
             href="#"
             className="block text-white hover:text-[#EB1C22] transition-colors py-2 px-4 rounded hover:bg-white/10"

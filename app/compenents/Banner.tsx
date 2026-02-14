@@ -5,7 +5,7 @@ const ScrollingBanner = () => {
   const text = "PERMANENT LOCATION & SCHEDULE * DRAWING UP AN INDIVIDUAL TRAINING PROGRAM BEST PROFESSIONAL C";
   
   return (
-    <div className="w-full overflow-hidden bg-[#EB1C22] py-2">
+    <div className="w-full overflow-hidden bg-[#EB1C22] py-4">
       <div className="flex animate-scroll whitespace-nowrap">
         <span className="inline-block px-4 text-sm font-bold tracking-wide text-black md:text-base">
           {text}
