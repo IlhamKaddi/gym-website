@@ -1,10 +1,10 @@
 'use client';
 
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import Link from "next/link";
 
 interface BlogPost {
   id: number;
@@ -13,6 +13,7 @@ interface BlogPost {
   image: string;
   category: string;
   date: string;
+  slug: string;
 }
 
 const blogPosts: BlogPost[] = [
@@ -21,27 +22,30 @@ const blogPosts: BlogPost[] = [
     title: "5 exercices pour brûler la graisse rapidement",
     excerpt:
       "Découvrez les meilleurs exercices pour perdre du gras efficacement et améliorer votre condition physique.",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop",
+    image: "/exercices-pour-bruler.jfif",
     category: "Training",
     date: "12 Jan 2026",
+    slug: "/blog/blog1",
   },
   {
     id: 2,
     title: "Que manger après l'entraînement ?",
     excerpt:
       "L'alimentation post-workout joue un rôle clé dans la récupération et la prise de muscle.",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=600&fit=crop",
+    image: "/que-mange.jfif",
     category: "Nutrition",
     date: "08 Jan 2026",
+    slug: "/blog/blog2",
   },
   {
     id: 3,
     title: "Comment rester motivé toute l'année",
     excerpt:
       "La motivation ne suffit pas toujours. Voici comment garder la discipline et atteindre vos objectifs.",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop",
+    image: "/rester-motive.jfif",
     category: "Mindset",
     date: "02 Jan 2026",
+    slug: "/blog/blog3",
   },
 ];
 
@@ -66,7 +70,10 @@ export default function Blog() {
           >
             {blogPosts.map((post) => (
               <SwiperSlide key={post.id}>
-                <div className="relative rounded-3xl overflow-hidden h-80">
+                <Link
+                  href={post.slug}
+                  className="relative rounded-3xl overflow-hidden h-80 block"
+                >
                   <img
                     src={post.image}
                     alt={post.title}
@@ -81,7 +88,7 @@ export default function Blog() {
                       {post.category}
                     </span>
                   </div>
-                </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -89,19 +96,25 @@ export default function Blog() {
 
         {/* --------- DESKTOP GRID --------- */}
         <div className="max-md:hidden sm:grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Large featured post */}
-          <div className="lg:col-span-7 group relative overflow-hidden rounded-3xl h-[600px] cursor-pointer">
+
+          {/* Featured Post */}
+          <Link
+            href={blogPosts[0].slug}
+            className="lg:col-span-7 group relative overflow-hidden rounded-3xl h-[600px] block"
+          >
             <img
               src={blogPosts[0].image}
               alt={blogPosts[0].title}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+
             <div className="absolute top-6 right-6">
               <span className="px-4 py-2 bg-red-500 text-white text-xs font-bold rounded-full backdrop-blur-sm">
                 {blogPosts[0].category}
               </span>
             </div>
+
             <div className="absolute bottom-0 left-0 right-0 p-8">
               <span className="text-xs text-gray-400 tracking-wider">
                 {blogPosts[0].date}
@@ -109,8 +122,10 @@ export default function Blog() {
               <h3 className="text-3xl md:text-4xl font-bold mt-2 mb-4 leading-tight">
                 {blogPosts[0].title}
               </h3>
-              <p className="text-gray-300 mb-6 max-w-lg">{blogPosts[0].excerpt}</p>
-              <div className="inline-flex items-center text-red-500 font-semibold group-hover:gap-3 gap-2 transition-all">
+              <p className="text-gray-300 mb-6 max-w-lg">
+                {blogPosts[0].excerpt}
+              </p>
+              <div className="inline-flex items-center text-red-500 font-semibold gap-2 group-hover:gap-3 transition-all">
                 Read Article
                 <svg
                   className="w-5 h-5 transition-transform group-hover:translate-x-1"
@@ -127,14 +142,15 @@ export default function Blog() {
                 </svg>
               </div>
             </div>
-          </div>
+          </Link>
 
-          {/* Side posts */}
+          {/* Side Posts */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             {blogPosts.slice(1).map((post) => (
-              <div
+              <Link
                 key={post.id}
-                className="group relative overflow-hidden rounded-3xl h-[290px] cursor-pointer"
+                href={post.slug}
+                className="group relative overflow-hidden rounded-3xl h-[290px] block"
               >
                 <img
                   src={post.image}
@@ -147,9 +163,13 @@ export default function Blog() {
                     <span className="px-3 py-1 bg-white/10 backdrop-blur-md text-white text-xs font-semibold rounded-full border border-white/20">
                       {post.category}
                     </span>
-                    <span className="text-xs text-gray-400">{post.date}</span>
+                    <span className="text-xs text-gray-400">
+                      {post.date}
+                    </span>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 leading-tight">{post.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 leading-tight">
+                    {post.title}
+                  </h3>
                   <div className="flex items-center text-red-500 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
                     Lire plus
                     <svg
@@ -167,9 +187,10 @@ export default function Blog() {
                     </svg>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
+
         </div>
       </div>
     </section>
