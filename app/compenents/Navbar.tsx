@@ -33,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
         <div className="flex md:flex items-center space-x-8 max-md:hidden font-medium">
 
           <a href="/ " className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">Home</a>
-          <a href="#" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">About</a>
+          <a href="/about" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">About</a>
       <Link href="/maps" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">
           Location
        </Link>
@@ -72,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             Home
           </a>
           <a
-            href="#"
+            href="/about"
             className="block text-white hover:text-[#EB1C22] transition-colors py-2 px-4 rounded hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(false)}
           >

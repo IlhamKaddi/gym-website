@@ -53,7 +53,7 @@ export default function ArticleLayout({
       <Navbar />
 
       {/* Article */}
-      <article className="relative max-w-4xl mx-auto px-6 pt-10 pb-24">
+      <article className="relative max-w-6xl mx-auto px-6 pt-10 pb-24">
         {/* Meta */}
         <div className="flex flex-wrap items-center gap-4 mb-8">
           <span className="px-4 py-2 rounded-full bg-[#EB1C22]/10 border border-[#EB1C22]/30 text-[#EB1C22] text-sm">
