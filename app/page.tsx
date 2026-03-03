@@ -13,7 +13,7 @@ import HeroSection from "./compenents/Hero";
 
 export default function Home() {
   return (
-    <div className=" bg-black ">
+    <div className=" bg-zinc-950 ">
     <HeroSection/>
     <ScrollingBanner/>
     <ChooseUs/>

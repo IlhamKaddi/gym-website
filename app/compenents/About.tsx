@@ -28,7 +28,7 @@ export default function About() {
     <section
       ref={sectionRef}
       id="section-about-gym"
-      className="bg-black text-white py-20 overflow-hidden"
+      className="bg-zinc-950 text-white py-20 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-4">
         {/* Title */}

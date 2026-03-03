@@ -10,7 +10,7 @@ interface FooterProps {
 
 export  const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   return (
-    <footer className={`bg-black text-white ${className}`}>
+    <footer className={`bg-zinc-950 text-white ${className}`}>
       {/* Main Footer Content */}
       <div className="px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">

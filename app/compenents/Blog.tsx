@@ -51,7 +51,7 @@ const blogPosts: BlogPost[] = [
 
 export default function Blog() {
   return (
-    <section className="relative py-12 bg-black text-white overflow-hidden">
+    <section className="relative py-12 bg-zinc-950 text-white overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-12">
           <h2 className="ml-4 md:ml-0 font-orbitron font-bold text-3xl md:text-5xl tracking-[1.5px] text-white [text-shadow:0_0_8px_#EB1C22] mb-4">

@@ -85,7 +85,7 @@ const cards: Card[] = [
   );
 
   return (
-    <section className=" bg-black flex items-center justify-center px-6 py-20">
+    <section className=" bg-zinc-950 flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl w-full">
 
         <h2 className="font-orbitron text-white tracking-[1.5px] [text-shadow:0_0_8px_#EB1C22] text-2xl md:text-4xl font-bold mb-12 ">

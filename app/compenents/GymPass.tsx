@@ -91,7 +91,7 @@ export default function GymPass() {
 
 
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
+    <div className="min-h-screen bg-zinc-950 text-white flex items-center justify-center p-4">
       <div className="w-full max-w-6xl">
         {/* Title */}
         <h1 className="font-orbitron text-white tracking-[1.5px] [text-shadow:0_0_8px_#EB1C22] text-2xl md:text-5xl font-bold text-center mb-8 tracking-wider">

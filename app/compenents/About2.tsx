@@ -28,7 +28,7 @@ export default function About2() {
     <section
       ref={sectionRef}
       id="section-fitness-features"
-      className="relative bg-black text-white pt-2 pb-12 overflow-hidden"
+      className="relative bg-zinc-950 text-white pt-2 pb-12 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-10">

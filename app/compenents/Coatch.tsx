@@ -31,7 +31,7 @@ const coaches: Coach[] = [
 
 const Coach: React.FC = () => {
   return (
-    <section className="bg-black py-16 px-4">
+    <section className="bg-zinc-950 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-start mb-12">

@@ -52,7 +52,7 @@ const TitleWithLine = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-export default function About() {
+export default function Section1() {
   return (
     <section className="relative w-full min-h-screen flex items-center overflow-hidden font-sans">
       {/* Background */}
