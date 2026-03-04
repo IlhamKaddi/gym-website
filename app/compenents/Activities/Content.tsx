@@ -69,7 +69,7 @@ export default function ActivitiesContent() {
                 viewport={{ once: true }}
                 className={isReversed ? "md:order-2" : ""}
               >
-                <h3 className="text-sm uppercase tracking-widest text-zinc-400 mb-3">
+                <h3 className="text-[18px] font-semibold uppercase tracking-widest text-white mb-3">
                   {activity.title}
                 </h3>
 

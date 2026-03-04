@@ -12,7 +12,7 @@ import WhyUs from '../compenents/Aboutpage/Whyus';
 function AboutUs() {
   return (
     <div>
-     <Navbar className='bg-zinc-950'/>
+   
         <Section1/>
         <Gym/>
         <InfosClub/>

@@ -43,7 +43,12 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
         {/* Action Buttons */}
         <div className="flex items-center space-x-2 sm:space-x-4">
   
-          <button className='flex md:flex max-md:hidden px-4 py-[4px] border-2 border-[#EB1C22] rounded-xl'>contact us </button>
+          <button className="group flex md:flex max-md:hidden items-center gap-2 px-5 py-2
+  border-2 border-[#EB1C22] rounded-xl
+  text-[#EB1C22] text-sm font-semibold tracking-wide uppercase
+  hover:bg-[#EB1C22] hover:text-white
+  hover:shadow-[0_4px_20px_rgba(235,28,34,0.40)]
+  transition-all duration-300">contact us </button>
           <button
             className="p-2 hover:bg-white/10 rounded-full transition-colors md:hidden"
             onClick={toggleMobileMenu}

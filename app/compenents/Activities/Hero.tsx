@@ -10,7 +10,7 @@ type ActivitiesHeroProps = {
 };
 
 export default function ActivitiesHero({
-  imageUrl = "/img2.jpg", 
+  imageUrl = "/activities/act-gym-hero.PNG", 
   title = "ACTIVITÉS",
 }: ActivitiesHeroProps) {
   return (
@@ -28,7 +28,7 @@ export default function ActivitiesHero({
 
       {/* Dark Gradient Overlay */}
       <div className="absolute inset-0 bg-black/70" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/30" />
+     
 
       {/* Animated Title */}
       <div className="relative z-10 flex items-center justify-center h-full">

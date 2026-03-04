@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Navbar } from "../Navbar";
 
 const LocationIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-6 h-6">
@@ -54,15 +55,18 @@ const TitleWithLine = ({ children }: { children: React.ReactNode }) => (
 
 export default function Section1() {
   return (
-    <section className="relative w-full min-h-screen flex items-center overflow-hidden font-sans">
-      {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80')`,
-        }}
-      />
-      <div className="absolute inset-0 bg-black/75" />
+ <section className="relative w-full min-h-screen font-sans">
+  {/* Background */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: `url('/about-us-hero.jpg')` }}
+  />
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/60 z-0" />
+
+  {/* Navbar */}
+  <Navbar className="relative z-20 bg-transparent" />
+      
 
       {/* Content */}
       <div className="relative z-10 w-full px-8 md:px-16 py-16 max-w-7xl mx-auto">
