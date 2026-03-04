@@ -23,7 +23,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       title: "WORK WITH PROFESSIONALS",
       subtitle:
         "Train with certified coaches and reach your goals faster.",
-      image: "/hero/gym.jpg",
+      image: "/hero/hero-header.jpg",
     },
     {
       title: "TRANSFORM YOUR BODY",
