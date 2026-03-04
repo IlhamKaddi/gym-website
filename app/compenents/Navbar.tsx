@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
       <Link href="/maps" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">
           Location
        </Link>
-          <a href="#" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">Activities</a>
+          <a href="/activities" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">Activities</a>
         </div>
 
         {/* Action Buttons */}
@@ -65,7 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
       >
         <div className="px-4 py-4 space-y-3 bg-black/20 backdrop-blur-sm">
           <a
-            href="#"
+            href=" /"
             className="block text-white hover:text-[#EB1C22] transition-colors py-2 px-4 rounded hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(false)}
           >
