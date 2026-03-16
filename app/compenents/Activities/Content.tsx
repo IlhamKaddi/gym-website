@@ -51,7 +51,7 @@ const activities: Activity[] = [
 
 export default function ActivitiesContent() {
   return (
-    <section className="bg-zinc-950 py-28">
+    <section className="bg-zinc-950 py-12">
       <div className="max-w-6xl mx-auto space-y-10 px-6">
         {activities.map((activity, index) => {
           const isReversed = index % 2 !== 0;

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Search, ShoppingCart, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -42,13 +42,14 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
 
         {/* Action Buttons */}
         <div className="flex items-center space-x-2 sm:space-x-4">
-  
+          <Link href="/contact">
           <button className="group flex md:flex max-md:hidden items-center gap-2 px-5 py-2
-  border-2 border-[#EB1C22] rounded-xl
-  text-[#EB1C22] text-sm font-semibold tracking-wide uppercase
-  hover:bg-[#EB1C22] hover:text-white
-  hover:shadow-[0_4px_20px_rgba(235,28,34,0.40)]
-  transition-all duration-300">contact us </button>
+              border-2  text-sm font-semibold tracking-wide uppercase
+            bg-[#EB1C22] text-white
+             shadow-[0_4px_20px_rgba(235,28,34,0.40)]
+             transition-all duration-300 border-[#EB1C22] rounded-xl
+             hover:text-[#EB1C22] hover:bg-transparent">contact us </button>
+               </Link>
           <button
             className="p-2 hover:bg-white/10 rounded-full transition-colors md:hidden"
             onClick={toggleMobileMenu}
@@ -60,6 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
               <Menu className="w-5 h-5" />
             )}
           </button>
+        
         </div>
       </div>
 
@@ -83,36 +85,39 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
           >
             About
           </a>
-        <Link href="/maps" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">
+        <Link href="/maps" className="block text-white hover:text-[#EB1C22] transition-colors py-2 px-4 rounded hover:bg-white/10">
           Location
        </Link>
           <a
-            href="#"
+            href="/activities"
             className="block text-white hover:text-[#EB1C22] transition-colors py-2 px-4 rounded hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Activities
           </a>
           {/* Contact Button */}
+          <Link href="/contact">
           <button
             onClick={() => setIsMobileMenuOpen(false)}
             className="
-    w-full 
-    mt-3 
-    py-3 
-    text-center 
-    font-semibold 
-    border-2 
-    border-[#EB1C22] 
-    rounded-xl 
-    text-white 
-    hover:bg-[#EB1C22] 
-    hover:text-black 
-    transition-all
-  "
+                w-full 
+                mt-3 
+                py-3 
+                text-center 
+                font-semibold 
+                border-2 
+               border-[#EB1C22] 
+               rounded-xl 
+            text-white 
+             hover:bg-[#EB1C22] 
+           hover:text-black 
+           transition-all
+        "
           >
             Contact us
           </button>
+          </Link>
+       
 
         </div>
       </div>
@@ -120,17 +125,3 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
   );
 };
 
-// Demo wrapper to show the navbar
-export default function NavbarDemo() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      <Navbar />
-      <div className="px-4 sm:px-6 lg:px-8 py-12 text-white">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4">Responsive Navbar Demo</h1>
-        <p className="text-gray-300 max-w-2xl">
-          This navbar is fully responsive with a mobile menu that slides down when you click the menu icon on smaller screens. Try resizing your browser window to see it in action!
-        </p>
-      </div>
-    </div>
-  );
-}
