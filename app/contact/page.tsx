@@ -4,6 +4,8 @@ import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Footer } from "../compenents/Footer";
+import { Navbar } from "../compenents/Navbar";
 
 /* ZOD VALIDATION */
 
@@ -58,7 +60,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-zinc-950 py-20 px-6">
+    <>
+    <Navbar className="bg-zinc-950S"/>
+  <section className="bg-zinc-950 py-20 px-6">
+          
       <div className="max-w-6xl mx-auto">
         {/* HEADER */}
         <div className="text-center mb-16">
@@ -192,6 +197,8 @@ export default function ContactSection() {
           </form>
         </div>
       </div>
+      <Footer />
     </section>
+   </>  
   );
 }

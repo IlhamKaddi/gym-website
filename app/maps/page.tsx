@@ -5,7 +5,7 @@ import { Footer } from '../compenents/Footer'
 
 function page() {
   return (
-    <div className='bg-black'>
+    <div className='bg-zinc-950'>
      <Navbar/>
      <Maps/>
      <Footer/>
