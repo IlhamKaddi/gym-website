@@ -61,7 +61,7 @@ export default function ContactSection() {
 
   return (
     <>
-    <Navbar className="bg-zinc-950S"/>
+    <Navbar className="bg-zinc-950"/>
   <section className="bg-zinc-950 py-20 px-6">
           
       <div className="max-w-6xl mx-auto">
