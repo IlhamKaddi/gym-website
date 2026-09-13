@@ -38,7 +38,7 @@ export default function About() {
           ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
           `}
         >
-          About Our Gym
+          À PROPOS DE NOTRE SALLE
         </h2>
 
         {/* Video */}
@@ -71,12 +71,15 @@ export default function About() {
             ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
             `}
           >
-            <p className="leading-relaxed text-gray-300">
-              Lorem ipsum dolor sit amet consectetur. Sit proin a ultrices sit.
-              Pharetra enim sed neque dolor viverra in elementum ultrices cursus.
-              Egestas sagittis neque elit pharetra odio semper consectetur.
-              Praesent ac tortor id sed sit tortor eu potenti gravida.
-            </p>
+         <p className="leading-relaxed text-gray-300">
+  Depuis 10 ans, nous accompagnons celles et ceux qui souhaitent améliorer
+  leur condition physique, développer leur force et repousser leurs limites.
+  Notre salle met à votre disposition un espace moderne, des équipements
+  adaptés à tous les niveaux et un environnement motivant pour vous permettre
+  de vous entraîner dans les meilleures conditions. Que votre objectif soit
+  la prise de masse, la perte de poids, le renforcement musculaire ou
+  simplement rester en forme, nous vous aidons à progresser à votre rythme.
+</p>
           </div>
 
           {/* Badge */}
@@ -87,7 +90,7 @@ export default function About() {
             `}
           >
             <button className="px-10 py-4 rounded-xl uppercase tracking-wide bg-[#EB1C22] hover:scale-105 transition-transform duration-300">
-              10 Years
+              10 ans
             </button>
           </div>
         </div>

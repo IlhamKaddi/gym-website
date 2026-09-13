@@ -55,7 +55,7 @@ export default function Blog() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-12">
           <h2 className="ml-4 md:ml-0 font-orbitron font-bold text-3xl md:text-5xl tracking-[1.5px] text-white [text-shadow:0_0_8px_#EB1C22] mb-4">
-            Our Blog
+            Notre Blog
           </h2>
           <div className="ml-4 md:ml-0 h-1 w-24 bg-gradient-to-r from-red-500 to-transparent" />
         </div>

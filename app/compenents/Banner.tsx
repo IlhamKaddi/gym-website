@@ -1,39 +1,43 @@
+
 "use client";
-import React from 'react';
+
+import React from "react";
 
 const ScrollingBanner = () => {
-  const text = "PERMANENT LOCATION & SCHEDULE * DRAWING UP AN INDIVIDUAL TRAINING PROGRAM BEST PROFESSIONAL C";
-  
+const items = [
+  "ENTRAÎNEZ-VOUS SANS LIMITES",
+  "DÉVELOPPEZ VOTRE FORCE",
+  "AUCUNE EXCUSE",
+  "COACHING PERSONNALISÉ",
+  "OUVERT 7J/7",
+  "DEVENEZ PLUS FORT CHAQUE JOUR",
+];
+
   return (
-    <div className="w-full overflow-hidden bg-[#EB1C22] py-4">
-      <div className="flex animate-scroll whitespace-nowrap">
-        <span className="inline-block px-4 text-sm font-bold tracking-wide text-black md:text-base">
-          {text}
-        </span>
-        <span className="inline-block px-4 text-sm font-bold tracking-wide text-black md:text-base">
-          {text}
-        </span>
-        <span className="inline-block px-4 text-sm font-bold tracking-wide text-black md:text-base">
-          {text}
-        </span>
+    <div className="w-full overflow-hidden bg-[#EB1C22] py-3">
+      <div className="flex w-max animate-scroll">
+        {[...items, ...items, ...items].map((item, index) => (
+          <React.Fragment key={index}>
+            <span className="px-6 text-sm font-bold tracking-[0.15em] text-black md:px-8 md:text-base">
+              {item}
+            </span>
+            <span className="text-black">✦</span>
+          </React.Fragment>
+        ))}
       </div>
-      
+
       <style jsx>{`
         @keyframes scroll {
-          0% {
+          from {
             transform: translateX(0);
           }
-          100% {
+          to {
             transform: translateX(-33.333%);
           }
         }
-        
+
         .animate-scroll {
-          animation: scroll 20s linear infinite;
-        }
-        
-        .animate-scroll:hover {
-          animation-play-state: paused;
+          animation: scroll 25s linear infinite;
         }
       `}</style>
     </div>
