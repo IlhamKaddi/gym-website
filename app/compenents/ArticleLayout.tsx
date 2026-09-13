@@ -29,6 +29,7 @@ export default function ArticleLayout({
       const scrollTop = window.scrollY;
       setScrollProgress((scrollTop / documentHeight) * 100);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -49,11 +50,12 @@ export default function ArticleLayout({
         />
       </div>
 
-      {/* Navbar (scrolling) */}
+      {/* Navbar */}
       <Navbar />
 
       {/* Article */}
       <article className="relative max-w-6xl mx-auto px-6 pt-10 pb-24">
+
         {/* Meta */}
         <div className="flex flex-wrap items-center gap-4 mb-8">
           <span className="px-4 py-2 rounded-full bg-[#EB1C22]/10 border border-[#EB1C22]/30 text-[#EB1C22] text-sm">
@@ -85,14 +87,17 @@ export default function ArticleLayout({
             .prose p {
               @apply text-gray-300 leading-relaxed mb-6 text-lg;
             }
+
             .prose h2 {
               @apply text-3xl font-bold text-white mt-14 mb-6 relative pl-6;
             }
+
             .prose h2::before {
               content: "";
               @apply absolute left-0 top-2 w-1 h-8 rounded-full;
               background-color: #EB1C22;
             }
+
             .prose blockquote {
               @apply border-l-4 bg-[#EB1C22]/10 px-6 py-4 rounded-r-2xl my-10;
               border-color: #EB1C22;
@@ -105,16 +110,18 @@ export default function ArticleLayout({
         {/* CTA */}
         <div className="mt-20 p-10 rounded-3xl bg-[#EB1C22]/10 border border-[#EB1C22]/20 text-center">
           <h3 className="text-2xl font-bold mb-3">
-            🔥 Ready to transform your body?
+            🔥 Prêt(e) à passer à l’action ?
           </h3>
+
           <p className="text-gray-300 mb-6">
-            Follow our weekly training plans and get real results.
+            Découvrez nos programmes d’entraînement et commencez dès aujourd’hui à atteindre vos objectifs.
           </p>
+
           <Link
-            href="/programs"
+            href="/contact"
             className="inline-block px-8 py-3 rounded-xl bg-[#EB1C22] text-black font-semibold transition hover:scale-105"
           >
-            Join the Program
+            Contactez-nous
           </Link>
         </div>
       </article>
