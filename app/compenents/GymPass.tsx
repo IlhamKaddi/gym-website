@@ -210,12 +210,12 @@ export default function GymPass() {
                   ))}
                 </ul>
 
-                <button
+                {/* <button
                   type="button"
                   className="w-full bg-[#EB1C22] text-black font-bold py-3 rounded-full hover:bg-red-500 transition-colors"
                 >
                   Choisir ce pass
-                </button>
+                </button> */}
               </div>
             ))}
           </div>
