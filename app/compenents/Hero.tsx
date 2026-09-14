@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "./Navbar";
+import Link from "next/link";
 
 interface Slide {
   title: string;
@@ -20,24 +21,25 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({
   slides = [
     {
-      title: "WORK WITH PROFESSIONALS",
+      title: "ENTRAÎNEZ-VOUS AVEC DES PROFESSIONNELS",
       subtitle:
-        "Train with certified coaches and reach your goals faster.",
+        "Entraînez-vous avec des coachs certifiés et atteignez vos objectifs plus rapidement.",
       image: "/hero/hero-header.jpg",
     },
     {
-      title: "TRANSFORM YOUR BODY",
+      title: "TRANSFORMEZ VOTRE CORPS",
       subtitle:
-        "Customized training programs tailored to your fitness level.",
+        "Des programmes d'entraînement personnalisés, adaptés à votre niveau et à vos objectifs.",
       image: "/hero/exercice-bike.webp",
     },
     {
-      title: "BUILD YOUR STRENGTH",
+      title: "DÉVELOPPEZ VOTRE FORCE",
       subtitle:
-        "State-of-the-art equipment for maximum performance.",
+        "Des équipements modernes et performants pour repousser vos limites.",
       image: "/hero/DSC08963-Belhus_Gym.jpg",
     },
   ],
+
   className = "",
   includeNavbar = true,
   autoSlideInterval = 6000,
@@ -114,17 +116,26 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </motion.p>
           </AnimatePresence>
 
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <button className="bg-[#EB1C22] px-8 py-3 rounded-full font-semibold hover:scale-105 transition-all shadow-lg shadow-[#EB1C22]/40">
-              Our History
-            </button>
 
-            <button className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold border border-white/40 hover:bg-white/10 transition">
-              Our Activities
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
+{/* Boutons */}
+<div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+  <Link
+    href="/about"
+    className="bg-[#EB1C22] px-8 py-3 rounded-full font-semibold hover:scale-105 transition-all shadow-lg shadow-[#EB1C22]/40"
+  >
+    Notre histoire
+  </Link>
+
+  <Link
+    href="/activities"
+    className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold border border-white/40 hover:bg-white/10 transition"
+  >
+    Nos activités
+    <ChevronRight className="w-5 h-5" />
+  </Link>
+</div>
+
+
 
           {/* Slider Controls */}
           <div className="flex items-center justify-center gap-4">

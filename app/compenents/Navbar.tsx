@@ -32,12 +32,12 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
         {/* <div className="hidden md:flex items-center space-x-6 lg:space-x-8"> */}
         <div className="flex md:flex items-center space-x-8 max-md:hidden font-medium">
 
-          <a href="/ " className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">Home</a>
-          <a href="/about" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">About</a>
+          <a href="/ " className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">Accueil</a>
+          <a href="/about" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">À Propos</a>
       <Link href="/maps" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">
-          Location
+          Localisation
        </Link>
-          <a href="/activities" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">Activities</a>
+          <a href="/activities" className="hover:text-[#EB1C22] transition-colors text-sm lg:text-base">Activités</a>
         </div>
 
         {/* Action Buttons */}
@@ -48,7 +48,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             bg-[#EB1C22] text-white
              shadow-[0_4px_20px_rgba(235,28,34,0.40)]
              transition-all duration-300 border-[#EB1C22] rounded-xl
-             hover:text-[#EB1C22] hover:bg-transparent">contact us </button>
+             hover:text-[#EB1C22] hover:bg-transparent">Contactez Nous </button>
                </Link>
           <button
             className="p-2 hover:bg-white/10 rounded-full transition-colors md:hidden"
@@ -76,24 +76,24 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
             className="block text-white hover:text-[#EB1C22] transition-colors py-2 px-4 rounded hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Home
+            Accueil
           </a>
           <a
             href="/about"
             className="block text-white hover:text-[#EB1C22] transition-colors py-2 px-4 rounded hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            About
+            A Propos
           </a>
         <Link href="/maps" className="block text-white hover:text-[#EB1C22] transition-colors py-2 px-4 rounded hover:bg-white/10">
-          Location
+          Localisation
        </Link>
           <a
             href="/activities"
             className="block text-white hover:text-[#EB1C22] transition-colors py-2 px-4 rounded hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Activities
+            Activités
           </a>
           {/* Contact Button */}
           <Link href="/contact">
@@ -114,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({ className = '' }) => {
            transition-all
         "
           >
-            Contact us
+            Contactez Nous
           </button>
           </Link>
        
