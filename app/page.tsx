@@ -7,7 +7,9 @@ import ChooseUs from "./compenents/ChooseUs";
 import Coach from "./compenents/Coatch";
 import { Footer } from "./compenents/Footer";
 import GymPass from "./compenents/GymPass";
+import WhatsAppButton from "./compenents/Whatsapp";
 import HeroSection from "./compenents/Hero";
+
 
 
 
@@ -23,6 +25,7 @@ export default function Home() {
     <GymPass/>
     <Blog/>
     <Footer/>
+    <WhatsAppButton/>
     </div>
   );
 }

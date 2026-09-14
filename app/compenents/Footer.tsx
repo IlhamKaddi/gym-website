@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
